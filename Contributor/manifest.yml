@@ -1,0 +1,11 @@
+manifest_version: 1
+artifacts:
+   setup_script: scripts/setup.sql
+   readme: readme.md
+   default_streamlit: code_schema.contributor_streamlit
+
+privileges:
+  - IMPORTED PRIVILEGES ON SNOWFLAKE DB:
+      description: "Access to view all databases, schemas, and tables in your account"
+  - CREATE DATABASE:
+      description: "Create temporary databases if needed"

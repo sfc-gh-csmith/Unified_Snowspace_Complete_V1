@@ -1,0 +1,17 @@
+definition_version: 2
+entities:
+   us_contributor_app_package:
+      type: application package
+      stage: stage_content.contributor_stage
+      manifest: app/manifest.yml
+      identifier: us_contributor_app_package
+      artifacts:
+         - src: app/*
+           dest: ./
+         - streamlit/contributor_streamlit.py
+   Unified_Snowspace_contributor_app:
+      type: application
+      identifier: contributor
+      from:
+         target: us_contributor_app_package
+      debug: false

@@ -1,0 +1,10 @@
+name: contributor_streamlit
+channels:
+  - snowflake
+dependencies:
+  - snowflake-native-apps-permission
+  - streamlit=1.35.0  # Pin to specific version
+  # Add other packages your app needs:
+  - pandas
+  - numpy
+  # - scikit-learn

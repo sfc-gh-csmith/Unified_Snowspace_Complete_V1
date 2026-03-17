@@ -1,0 +1,17 @@
+definition_version: 2
+entities:
+   us_orchestrator_app_package:
+      type: application package
+      stage: stage_content.orchestrator_stage
+      manifest: app/manifest.yml
+      identifier: us_orchestrator_app_package
+      artifacts:
+         - src: app/*
+           dest: ./
+         - streamlit/orchestrator_streamlit.py
+   Unified_Snowspace_Orchestrator_app:
+      type: application
+      identifier: orchestrator
+      from:
+         target: us_orchestrator_app_package
+      debug: false
